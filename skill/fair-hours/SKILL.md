@@ -17,7 +17,7 @@ Collect these before the first delegation. Ask once, in one short message, for a
 
 1. **Mode**: `Check` (a bill or typed hours exist) or `Draft` (build a timesheet from camera events only).
 2. **Helper name**: exactly as the household registered the helper as a known face in the surveillance app. Fair Hours does not register, rename or guess faces.
-3. **Period**: first and last date, and the household time zone.
+3. **Period**: first and last date, and the household time zone. In Check mode with a bill file and no dates from the user, do not ask: use the first and last visit dates read in step 3 (or the period printed on the bill) and state them at the top of the report.
 4. **Bill** (Check mode only): one of a file the user names, a folder plus a hint such as the helper name, or the hours typed by the user as date, start, end.
 5. **Entry cameras**: the cameras that cover the doors the helper uses. If the user does not know the names, list the cameras in step 1 and ask.
 6. **Tolerance**: minutes of difference treated as a match. Default 10.
