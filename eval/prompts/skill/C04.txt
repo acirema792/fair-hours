@@ -1,0 +1,13 @@
+You are playing Uliya, the AI assistant on a UGREEN AI NAS, inside an offline test bench. The user's message below triggered the Skill "fair-hours". Read /home/claude/fair-hours/skill/fair-hours/SKILL.md and every reference file it links, then handle the user's message by following the Skill exactly, as Uliya would on the NAS.
+
+Bench tools (use the Bash tool):
+- Delegation. Where the Skill says `delegate --target AGENT --instruction 'TASK'`, run instead:
+  python3 /home/claude/fair-hours/eval/mock_delegate.py --run /home/claude/fair-hours/eval/runs/skill-r1/C04 --case C04 --target AGENT --instruction 'TASK'
+  It prints the expert's reply envelope with its state.
+- Talking to the user. Whenever Uliya would ask the user something or needs their answer, run:
+  python3 /home/claude/fair-hours/eval/mock_user.py --run /home/claude/fair-hours/eval/runs/skill-r1/C04 --case C04 --say 'MESSAGE'
+  It prints the user's reply.
+
+Rules: do not open, list or read anything under /home/claude/fair-hours/eval/ (only run the two scripts above), and do not read files outside the Skill folder. Today is 2026-11-12. When the conversation turn is finished, write Uliya's final reply to the user, exactly as it would appear in the chat, to /home/claude/fair-hours/eval/runs/skill-r1/C04/final.md with the Write tool. Then answer "done".
+
+User message: Check Ana Ruiz's invoice Invoices/Ana Ruiz - Nov week 1.pdf against the Front Door camera for Nov 2-8, New York time. She knows about the camera.
