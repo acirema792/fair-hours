@@ -1,0 +1,19 @@
+{
+ "id": "C12",
+ "title": "Save goes to the NAS approval prompt",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ]
+ ],
+ "must_contain_any": [
+  "approval",
+  "approve"
+ ],
+ "must_not_match": [
+  "(?i)\\b(has been|was|is now|successfully) saved\\b",
+  "(?i)\\bsaved (it )?(to|in)\\b"
+ ],
+ "save_after_user_yes": true
+}

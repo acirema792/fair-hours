@@ -1,0 +1,76 @@
+{
+ "id": "C12",
+ "mode": "check",
+ "user_message": "Check Ana Ruiz's invoice Invoices/Ana Ruiz - Nov 2.pdf against the Front Door camera, New York time. She knows about the camera.",
+ "fixtures": {
+  "cameras": [
+   {
+    "name": "Front Door",
+    "location": "Entrance",
+    "status": "online"
+   },
+   {
+    "name": "Garage Door",
+    "location": "Garage",
+    "status": "online"
+   },
+   {
+    "name": "Living Room",
+    "location": "Living room",
+    "status": "online"
+   }
+  ],
+  "bill": {
+   "file": "Invoices/Ana Ruiz - Nov 2.pdf",
+   "currency": "USD",
+   "total": 75.0,
+   "visits": [
+    {
+     "date": "2026-11-02",
+     "start": "09:00",
+     "end": "12:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    }
+   ]
+  },
+  "helper_events": [
+   {
+    "event_id": "evt_20261102_0902_0",
+    "time": "2026-11-02T09:02:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261102_1159_1",
+    "time": "2026-11-02T11:59:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   }
+  ],
+  "proof": [
+   {
+    "camera": "Front Door",
+    "date": "2026-11-02",
+    "count": 6,
+    "times": [
+     "07:30",
+     "08:15",
+     "10:40",
+     "12:30",
+     "15:10",
+     "18:05"
+    ]
+   }
+  ],
+  "save_state": "waiting_approval"
+ },
+ "user_script": {
+  "consent": "Yes.",
+  "save": "Yes, please save it in Documents/Household.",
+  "snapshots": "No."
+ }
+}

@@ -1,0 +1,9 @@
+protected:
+  - eval/cases.py
+  - eval/expected/**
+  - eval/fixtures/**
+  - eval/runs/**
+  - eval/results/**
+  - eval/score.py
+  - tools/uliya-kit-local/**
+maxFiles: 10

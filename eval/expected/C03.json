@@ -1,0 +1,20 @@
+{
+ "id": "C03",
+ "title": "Not seen while the camera was recording",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-05",
+   "Not seen"
+  ]
+ ],
+ "must_contain": [
+  "3 h"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

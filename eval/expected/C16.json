@@ -1,0 +1,26 @@
+{
+ "id": "C16",
+ "title": "Typed hours with a 15-minute tolerance",
+ "rows": [
+  [
+   "2026-11-02",
+   "Billed more than seen"
+  ],
+  [
+   "2026-11-04",
+   "Confirmed"
+  ],
+  [
+   "2026-11-06",
+   "Confirmed"
+  ]
+ ],
+ "must_contain": [
+  "18 min"
+ ],
+ "calls_forbidden": [
+  "ug-document",
+  "ug-filesystem",
+  "save-text"
+ ]
+}

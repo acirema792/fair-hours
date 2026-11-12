@@ -1,0 +1,21 @@
+{
+ "id": "C13",
+ "title": "Recording-proof query fails",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ],
+  [
+   "2026-11-04",
+   "Inconclusive"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "id": "C05",
+ "title": "Tolerance boundary: 10 minutes matches, 11 does not",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Billed more than seen"
+  ]
+ ],
+ "must_contain": [
+  "11 min"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "id": "C02",
+ "title": "Camera offline during a billed visit",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ]
+ ],
+ "consent_before_camera": true,
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "C07",
+ "title": "Bill lists hours only, no start or end times",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-04",
+   "Billed more than seen"
+  ],
+  [
+   "2026-11-06",
+   "Not seen"
+  ]
+ ],
+ "must_contain": [
+  "1 h 20 min"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "C11",
+ "mode": "check",
+ "user_message": "Check Ana Ruiz's latest invoice against the Front Door camera for Nov 2-8. It should be somewhere in Documents/Invoices. New York time; she knows about the camera.",
+ "fixtures": {
+  "cameras": [
+   {
+    "name": "Front Door",
+    "location": "Entrance",
+    "status": "online"
+   },
+   {
+    "name": "Garage Door",
+    "location": "Garage",
+    "status": "online"
+   },
+   {
+    "name": "Living Room",
+    "location": "Living room",
+    "status": "online"
+   }
+  ],
+  "find_results": [],
+  "helper_events": [],
+  "proof": []
+ },
+ "user_script": {
+  "consent": "Yes.",
+  "save": "No.",
+  "snapshots": "No.",
+  "fallback": "I'm not sure where else it is. What can we do instead?"
+ }
+}
