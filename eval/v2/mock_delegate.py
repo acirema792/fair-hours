@@ -80,7 +80,7 @@ def route(fx, target, inst):
                 if not w and dates and d not in dates:
                     continue
                 items.append({"time": p["time"], "camera": p["camera"], "recognised": p["recognised"]})
-            warn = [x["text"] for x in f.get("warnings", []) if not dates or x["date"] in dates or (w and w[0][:10] <= x["date"] <= w[1][:10])]
+            warn = [f'{x["date"]}: {x["text"]}' for x in f.get("warnings", []) if not dates or x["date"] in dates or (w and w[0][:10] <= x["date"] <= w[1][:10])]
             return respond("completed", data={"items": items, "count": len(items), "cut_at_limit": False, "warnings": warn})
         if f.get("helper_events_error"):
             return respond("failed", error={"code": "IDENTITY_NOT_FOUND", "message": f["helper_events_error"]})
@@ -92,7 +92,7 @@ def route(fx, target, inst):
         cut = f.get("helper_cut_after")
         if cut:
             items = [e for e in items if local(e["time"]) <= cut]
-        warn = [x["text"] for x in f.get("warnings", []) if not w or w[0][:10] <= x["date"] <= w[1][:10]]
+        warn = [f'{x["date"]}: {x["text"]}' for x in f.get("warnings", []) if not w or w[0][:10] <= x["date"] <= w[1][:10]]
         return respond("completed", data={"items": items, "count": len(items), "cut_at_limit": bool(cut),
                                           "note": f"list cut at the limit after {cut}" if cut else None, "warnings": warn})
     if action == "event-evidence":

@@ -14,7 +14,7 @@ Bill: the file name, or "hours you typed". Cameras: the entry camera names. Tole
 | Thu 2026-11-05 | 14:00–17:00 (3 h 00 min) | 13:55–17:40 (3 h 45 min) | seen 45 min longer than billed | Seen more than billed | 4 events |
 | Fri 2026-11-06 | 09:00–12:00 (3 h 00 min) | 09:02 only | none | Inconclusive: arrival or departure not recorded | 1 event |
 
-One row per billed visit, in date order; a split shift gives two rows on the same date. `Seen, not billed` dates appear in the same table with "none" in the Billed column. Bill lines for other workers are listed under the table as "not checked: other worker".
+One row per billed visit, in date order; a split shift gives two rows on the same date. `Seen, not billed` dates appear in the same table with "none" in the Billed column. A bill line for another worker appears as its own row, `Inconclusive: billed for another worker`.
 
 **Totals**
 - Billed: hours over N visits.

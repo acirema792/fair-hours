@@ -7,3 +7,11 @@ protected:
   - eval/score.py
   - tools/uliya-kit-local/**
 maxFiles: 10
+  # bench v2 (added after round 1; expected outcomes committed in 05b305c before any v2 run)
+  - eval/v2/cases_v2.py
+  - eval/v2/expected/**
+  - eval/v2/fixtures/**
+  - eval/v2/blind/**
+  - eval/v2/runs/**
+  - eval/v2/results/**
+  - eval/v2/score_v2.py
