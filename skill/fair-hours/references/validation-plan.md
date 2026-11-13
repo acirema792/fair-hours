@@ -13,6 +13,8 @@ What has been checked before NAS access, and what the finalist testing day will 
 2. What event-timeline returns for a name that is not a known identity, and whether it reports offline cameras or missing recordings.
 3. How often the test helper shows up as unrecognised on departures.
 4. `ug-knowledge save-text` goes through `waiting_approval` and returns verified with an output file.
+5. Whether event-timeline returns events oldest first or newest first (the truncation rule uses the span of returned events either way).
+6. Whether `identity-type all` honours "do not return names", and whether `ug-surveillance faces` returns the closest registered names.
 
 ## Setup on the testing day
 
