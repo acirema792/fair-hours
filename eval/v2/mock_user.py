@@ -35,8 +35,9 @@ def main():
     a = ap.parse_args()
     os.makedirs(a.run, exist_ok=True)
     fp = os.path.join(HERE, "fixtures", a.case + ".json")
-    if not os.path.exists(fp):
-        fp = os.path.join(HERE, "blind", "fixtures", a.case + ".json")
+    for alt in ("blind", "round2"):
+        if not os.path.exists(fp):
+            fp = os.path.join(HERE, alt, "fixtures", a.case + ".json")
     fx = json.load(open(fp))
     script = fx["user_script"]
     t = topic(a.say)

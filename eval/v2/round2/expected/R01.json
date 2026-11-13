@@ -1,0 +1,17 @@
+{
+ "id": "R01",
+ "title": "Camera gap at the departure: never Billed more than seen (G2)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

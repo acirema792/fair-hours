@@ -15,7 +15,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 AGENT_OF = {"ug-surveillance": "security-monitor-agent", "ug-document": "document-agent",
             "ug-filesystem": "file-agent", "ug-filemgr": "file-agent", "file-workflow": "file-agent",
             "ug-knowledge": "knowledge-agent", "ug-photo": "photo-agent", "ug-video": "media-agent", "ug-music": "media-agent"}
-SLOT = re.compile(r"\b[A-Z]{2,}(?:_[A-Z]{2,})+\b")
+SLOT = re.compile(r"\b(?:[A-Z]{2,}(?:_[A-Z]{2,})+|DATES|TIMEZONE)\b")  # audit round 2, G18: single-word slots too
 DATE = re.compile(r"(2026-\d\d-\d\d)(?:[ T](\d\d:\d\d))?")
 
 
@@ -66,6 +66,10 @@ def route(fx, target, inst):
             return respond("failed", error={"code": "WRONG_EXPERT", "message": f"{c} is owned by {AGENT_OF[c]}, not {target}"})
     f = fx["fixtures"]
     cams = f.get("cameras", [])
+    # audit round 2, G1: one action per delegation, as a real expert would require
+    acts = set(re.findall(r"\b(ug-surveillance|ug-document|ug-filesystem|ug-photo|ug-knowledge|ug-filemgr|file-workflow)\s+([a-z][a-z-]*)", low))
+    if len(acts) > 1:
+        return respond("failed", error={"code": "ONE_ACTION_PER_DELEGATION", "message": "this expert runs one CLI action per delegation; split the request"})
     action = re.search(r"ug-surveillance\s+([a-z-]+)", low)
     action = action.group(1) if action else ""
     if action == "event-timeline":
@@ -85,6 +89,21 @@ def route(fx, target, inst):
                 if not w and dates and d not in dates:
                     continue
                 items.append({"time": p["time"], "camera": p["camera"], "recognised": p["recognised"]})
+            # audit round 2, G1: the helper is a person at the door too; include their recognised events
+            no_names = re.search(r"(do not|don't|never) return names|without names|no names", low)
+            for e in f.get("helper_events", []):
+                if e["camera"] not in named:
+                    continue
+                if w and not (w[0] <= local(e["time"]) <= w[1]):
+                    continue
+                if not w and dates and e["time"][:10] not in dates:
+                    continue
+                it = {"time": e["time"], "camera": e["camera"], "recognised": "yes"}
+                if not no_names:
+                    it["identity"] = e["identity"]
+                    it["event_id"] = e["event_id"]
+                items.append(it)
+            items.sort(key=lambda x: x["time"])
             warn = [f'{x["date"]}: {x["text"]}' for x in f.get("warnings", []) if not dates or x["date"] in dates or (w and w[0][:10] <= x["date"] <= w[1][:10])]
             return respond("completed", data={"items": items, "count": len(items), "cut_at_limit": False, "warnings": warn})
         if f.get("helper_events_error"):
@@ -146,8 +165,9 @@ def main():
     a = ap.parse_args()
     os.makedirs(a.run, exist_ok=True)
     fp = os.path.join(HERE, "fixtures", a.case + ".json")
-    if not os.path.exists(fp):
-        fp = os.path.join(HERE, "blind", "fixtures", a.case + ".json")
+    for alt in ("blind", "round2"):
+        if not os.path.exists(fp):
+            fp = os.path.join(HERE, alt, "fixtures", a.case + ".json")
     fx = json.load(open(fp))
     out = route(fx, a.target, a.instruction)
     entry = {"seq": next_seq(a.run), "kind": "delegate", "target": a.target, "instruction": a.instruction,

@@ -9,10 +9,10 @@ Bill: the file name, or "hours you typed". Cameras: the entry camera names. Tole
 
 | Date | Billed | Seen at entry cameras | Difference | Result | Evidence |
 |---|---|---|---|---|---|
-| Mon 2026-11-02 | 09:00–12:00 (3 h 00 min) | 09:04–11:58 (2 h 54 min) | 6 min | Confirmed | 3 events |
-| Wed 2026-11-04 | 09:00–13:00 (4 h 00 min) | 09:10–11:25 (2 h 15 min) | billed 1 h 45 min more than seen | Billed more than seen | 2 events |
-| Thu 2026-11-05 | 14:00–17:00 (3 h 00 min) | 13:55–17:40 (3 h 45 min) | seen 45 min longer than billed | Seen more than billed | 4 events |
-| Fri 2026-11-06 | 09:00–12:00 (3 h 00 min) | 09:02 only | none | Inconclusive: arrival or departure not recorded | 1 event |
+| Tue 2026-10-06 | 08:30–11:30 (3 h 00 min) | 08:33–11:26 (2 h 53 min) | 7 min | Confirmed | 3 events |
+| Thu 2026-10-08 | 08:30–12:30 (4 h 00 min) | 08:41–10:56 (2 h 15 min) | billed 1 h 45 min more than seen | Billed more than seen | 2 events |
+| Fri 2026-10-09 | 13:00–15:00 (2 h 00 min) | 12:52–15:40 (2 h 48 min) | seen 48 min longer than billed | Seen more than billed | 4 events |
+| Sat 2026-10-10 | 10:00–12:00 (2 h 00 min) | 10:03 only | none | Inconclusive: arrival or departure not recorded | 1 event |
 
 One row per billed visit, in date order; a split shift gives two rows on the same date. `Seen, not billed` dates appear in the same table with "none" in the Billed column. A bill line for another worker appears as its own row, `Inconclusive: billed for another worker`.
 

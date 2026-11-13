@@ -1,0 +1,2 @@
+{"seq": 1, "kind": "delegate", "target": "document-agent", "instruction": "ug-document extract for the file \"Invoices/Ana Ruiz - Nov 2-3.pdf\". Extract the billed dates, the hourly rate if printed, and the billed hours or times for each date, as a schedule per date.", "state": "completed", "unresolved_slots": []}
+{"seq": 2, "kind": "user", "said": "Before I check the Front Door camera, I need to confirm: do the cameras recognise faces, and may they be used to check Ana Ruiz's hours? Please answer yes or no.", "topic": "other", "reply": "I don't know."}

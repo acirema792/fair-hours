@@ -4,7 +4,7 @@ Read this before step 1. These limits are part of the Skill, not options.
 
 ## Whose data is touched
 
-- **The named helper only.** Step 1 confirms the helper's registered name and returns nothing else about anyone. Step 4 asks for that one known identity. Fair Hours never searches strangers, household members or visitors by name.
+- **The named helper only.** Step 1 confirms the helper's registered name; if the name does not match exactly, only the closest registered names are shown so the user can pick the right one, with no images or details. Step 4 asks for that one known identity. Fair Hours never searches strangers, household members or visitors by name.
 - **Passages without identities.** Step 5 returns, for a few dates only, each passage's time, camera and whether the person was recognised (yes or no), with no names, faces, plates or snapshots. Passages answer two questions only: was the camera recording, and could an unrecognised person have been the helper.
 - **Entry cameras only.** The user chooses the cameras that cover the doors; a camera that is not at an entrance needs the user's confirmation that it only covers a door. Fair Hours does not use indoor cameras to follow a helper around the home.
 - **Snapshots on request.** Step 7 runs only for rows that are not `Confirmed` and have helper events, only when the user asks, with purpose `user_review`. Snapshots stay on the NAS.

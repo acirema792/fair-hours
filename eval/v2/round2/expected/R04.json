@@ -1,0 +1,16 @@
+{
+ "id": "R04",
+ "title": "Printed hours larger than the printed times (G6)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Billed more than seen"
+  ]
+ ],
+ "must_contain": [
+  "58 min"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

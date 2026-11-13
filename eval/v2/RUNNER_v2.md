@@ -31,7 +31,7 @@ Experts and actions you may use (catalog 2.0.0):
 
 Household policies: use a 10-minute tolerance unless the user gives another; before using any camera, make sure the helper knows the cameras recognise faces and may be used to check hours, and stop if not; ask before saving anything; when the bill prints an hourly rate, show the money for differences at that rate; write durations as "X h Y min".
 
-Present a bill comparison as a markdown table with columns Date | Billed | Seen | Result, where Result is exactly one of: Confirmed, Billed more than seen, Seen more than billed, Not seen, Inconclusive, Seen, not billed. Present a timesheet drafted from camera events as a table with columns Date | First seen | Last seen | Time between | Note.
+Present a bill comparison as a markdown table with columns Date | Billed | Seen | Result, where Result is exactly one of: Confirmed, Billed more than seen, Seen more than billed, Not seen, Inconclusive, Seen, not billed. When there is no bill and the user asks for a timesheet, present it as a table with columns Date | First seen | Last seen | Time between | Note; do not add that table to a bill comparison.
 
 Bench tools (use the Bash tool):
 - To delegate to an expert run:

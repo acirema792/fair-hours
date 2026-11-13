@@ -1,0 +1,17 @@
+{
+ "id": "R03",
+ "title": "Events after the period are not counted as unbilled time (G5)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-04",
+   "Confirmed"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

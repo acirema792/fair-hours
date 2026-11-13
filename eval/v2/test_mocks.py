@@ -27,7 +27,7 @@ for target, inst in tmpl:
         import mock_delegate as M
         ok = ok and M.window(inst) == ("2026-11-02 00:00", "2026-11-09 12:00")  # 12:00 on the day after PERIOD_END
     if "identity-type all" in inst:
-        ok = ok and data["count"] == 6 and all(i["time"].startswith("2026-11-04") for i in data["items"])  # DATES only
+        ok = ok and data["count"] == 8 and all(i["time"].startswith("2026-11-04") for i in data["items"]) and not any("identity" in i for i in data["items"])  # DATES only: 6 household passages + 2 helper events (round 2, G1), no names when the instruction forbids them
     bad += not ok
     print("OK  " if ok else "BAD ", target, "|", inst[:70], "->", out["state"], list(data)[:3])
 print("FAILED" if bad else "ALL ROUTES OK"); sys.exit(1 if bad else 0)

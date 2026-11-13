@@ -1,0 +1,17 @@
+{
+ "id": "R02",
+ "title": "Recording proof needed on every chosen entry camera (G3)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}
