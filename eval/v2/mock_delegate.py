@@ -61,7 +61,9 @@ def route(fx, target, inst):
             return respond("failed", error={"code": "WRONG_EXPERT", "message": f"{c} is owned by {AGENT_OF[c]}, not {target}"})
     f = fx["fixtures"]
     cams = f.get("cameras", [])
-    if "ug-surveillance" in low and "event-timeline" in low:
+    action = re.search(r"ug-surveillance\s+([a-z-]+)", low)
+    action = action.group(1) if action else ""
+    if action == "event-timeline":
         named = cameras_named(inst, cams)
         if "identity-type all" in low:  # passages
             if f.get("passages_error"):
@@ -93,10 +95,10 @@ def route(fx, target, inst):
         warn = [x["text"] for x in f.get("warnings", []) if not w or w[0][:10] <= x["date"] <= w[1][:10]]
         return respond("completed", data={"items": items, "count": len(items), "cut_at_limit": bool(cut),
                                           "note": f"list cut at the limit after {cut}" if cut else None, "warnings": warn})
-    if "ug-surveillance" in low and "event-evidence" in low:
+    if action == "event-evidence":
         ids = re.findall(r"evt_[0-9_]+", inst)
         return respond("completed", data={"evidence": [{"event_id": i, "type": "snapshot", "ref": f"snapshot://{i}/1"} for i in ids]})
-    if "ug-surveillance" in low and "faces" in low:
+    if action == "faces":
         known = f.get("known_faces", [])
         helper_asked = next((k for k in known if k.lower() in low), None)
         exact = [k for k in known if re.search(r"\b" + re.escape(k.lower()) + r"\b", low)]
@@ -105,7 +107,7 @@ def route(fx, target, inst):
         words = set(re.findall(r"[a-z]+", low))
         close = [k for k in known if words & set(k.lower().split())]
         return respond("completed", data={"match": "no", "closest": close})
-    if "ug-surveillance" in low and "cameras" in low:
+    if action == "cameras":
         return respond("completed", data={"cameras": cams})
     if "ug-filesystem" in low and "find" in low:
         if "find_results" in f:
