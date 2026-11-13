@@ -1,1 +1,166 @@
-{"goal":"Maximise UGREEN Round 1 score for Fair Hours","attempts":[]}
+{
+ "goal": "Maximise UGREEN Round 1 score for Fair Hours",
+ "attempts": [
+  {
+   "round": 0,
+   "finding": "F0 period required even when the bill carries dates (bench C12)",
+   "action": "SKILL.md Required input 3: default period from bill",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F1",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F2",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F3",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F4",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F5",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F6",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F7",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F8",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F9",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F10",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F11",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F12",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F13",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F14",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F15",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F16",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F17",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F18",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F22",
+   "action": "skill text revision (see commit)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F19",
+   "action": "bench v2 as new files; v1 cases/scorer untouched (protected)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F20",
+   "action": "bench v2 as new files; v1 cases/scorer untouched (protected)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 1,
+   "finding": "F21",
+   "action": "bench v2 as new files; v1 cases/scorer untouched (protected)",
+   "outcome": "success",
+   "error": null
+  }
+ ]
+}
