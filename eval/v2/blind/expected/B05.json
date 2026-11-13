@@ -1,0 +1,28 @@
+{
+ "id": "B05",
+ "title": "Agency bill with a substitute worker and one short day",
+ "rows": [
+  [
+   "2026-11-09",
+   "Confirmed"
+  ],
+  [
+   "2026-11-10",
+   "Billed more than seen"
+  ],
+  [
+   "2026-11-11",
+   "Inconclusive"
+  ],
+  [
+   "2026-11-12",
+   "Confirmed"
+  ]
+ ],
+ "must_contain": [
+  "1 h 45 min"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

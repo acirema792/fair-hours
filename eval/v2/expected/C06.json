@@ -1,0 +1,21 @@
+{
+ "id": "C06",
+ "title": "Overnight home-care shifts crossing midnight",
+ "rows": [
+  [
+   "2026-11-03",
+   "Confirmed"
+  ],
+  [
+   "2026-11-05",
+   "Billed more than seen"
+  ]
+ ],
+ "must_contain": [
+  "50 min",
+  "25.00"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

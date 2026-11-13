@@ -1,0 +1,15 @@
+{
+ "id": "C15",
+ "title": "Bill is unreadable even by OCR: no visits invented",
+ "rows": [],
+ "must_contain_any": [
+  "Draft",
+  "draft",
+  "type",
+  "typed"
+ ],
+ "calls_forbidden": [
+  "identity-type known",
+  "save-text"
+ ]
+}

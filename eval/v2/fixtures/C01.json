@@ -1,0 +1,272 @@
+{
+ "id": "C01",
+ "mode": "check",
+ "user_message": "Check Ana Ruiz's cleaning invoice for Nov 2-8 against the Front Door camera. The invoice is the file Invoices/Ana Ruiz - Nov week 1.pdf. We're on New York time. Ana knows the door camera recognises faces and that we may check hours with it.",
+ "fixtures": {
+  "helper_name": "Ana Ruiz",
+  "bill": {
+   "file": "Invoices/Ana Ruiz - Nov week 1.pdf",
+   "visits": [
+    {
+     "date": "2026-11-02",
+     "start": "09:00",
+     "end": "12:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    },
+    {
+     "date": "2026-11-04",
+     "start": "09:00",
+     "end": "13:00",
+     "billed_hours": 4,
+     "hourly_rate": 25,
+     "line_amount": 100
+    },
+    {
+     "date": "2026-11-05",
+     "start": "14:00",
+     "end": "17:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    },
+    {
+     "date": "2026-11-06",
+     "start": "09:00",
+     "end": "12:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    }
+   ],
+   "currency": "USD",
+   "total": 325,
+   "failures": []
+  },
+  "helper_events": [
+   {
+    "event_id": "evt_20261102_0904",
+    "time": "2026-11-02T09:04:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261102_1030",
+    "time": "2026-11-02T10:30:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261102_1158",
+    "time": "2026-11-02T11:58:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261104_0910",
+    "time": "2026-11-04T09:10:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261104_1125",
+    "time": "2026-11-04T11:25:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261105_1355",
+    "time": "2026-11-05T13:55:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261105_1500",
+    "time": "2026-11-05T15:00:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261105_1610",
+    "time": "2026-11-05T16:10:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261105_1740",
+    "time": "2026-11-05T17:40:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261106_0902",
+    "time": "2026-11-06T09:02:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   }
+  ],
+  "passages": [
+   {
+    "time": "2026-11-02T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-04T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-06T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   }
+  ],
+  "cameras": [
+   {
+    "name": "Front Door",
+    "location": "Entrance",
+    "status": "online"
+   },
+   {
+    "name": "Garage Door",
+    "location": "Garage entrance",
+    "status": "online"
+   },
+   {
+    "name": "Living Room",
+    "location": "Living room",
+    "status": "online"
+   }
+  ],
+  "known_faces": [
+   "Ana Ruiz",
+   "Anabel Costa",
+   "Grace Mensah",
+   "Maya Chen",
+   "Sam Okafor",
+   "Jordan Okafor"
+  ]
+ },
+ "user_script": {
+  "consent": "Yes, she knows the door camera recognises faces and that we may use it to check hours.",
+  "save": "No, don't save it.",
+  "snapshots": "No thanks."
+ }
+}

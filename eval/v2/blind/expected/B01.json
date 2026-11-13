@@ -1,0 +1,32 @@
+{
+ "id": "B01",
+ "title": "Nanny split shift, late evening and an unbilled Saturday",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Seen more than billed"
+  ],
+  [
+   "2026-11-05",
+   "Confirmed"
+  ],
+  [
+   "2026-11-07",
+   "Seen, not billed"
+  ]
+ ],
+ "must_contain": [
+  "1 h 15 min"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

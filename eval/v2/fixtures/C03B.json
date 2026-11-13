@@ -1,0 +1,140 @@
+{
+ "id": "C03B",
+ "mode": "check",
+ "user_message": "Please check the cleaning invoice Invoices/Ana Ruiz - Nov 2-5.pdf from Ana Ruiz against the Front Door camera. Time zone America/New_York. She knows the camera recognises faces and may be used to check hours.",
+ "fixtures": {
+  "helper_name": "Ana Ruiz",
+  "bill": {
+   "file": "Invoices/Ana Ruiz - Nov 2-5.pdf",
+   "visits": [
+    {
+     "date": "2026-11-02",
+     "start": "09:00",
+     "end": "12:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    },
+    {
+     "date": "2026-11-05",
+     "start": "09:00",
+     "end": "12:00",
+     "billed_hours": 3,
+     "hourly_rate": 25,
+     "line_amount": 75
+    }
+   ],
+   "currency": "USD",
+   "total": 150,
+   "failures": []
+  },
+  "helper_events": [
+   {
+    "event_id": "evt_20261102_0858",
+    "time": "2026-11-02T08:58:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   },
+   {
+    "event_id": "evt_20261102_1200",
+    "time": "2026-11-02T12:00:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Ana Ruiz"
+   }
+  ],
+  "passages": [
+   {
+    "time": "2026-11-02T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-05T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   }
+  ],
+  "cameras": [
+   {
+    "name": "Front Door",
+    "location": "Entrance",
+    "status": "online"
+   },
+   {
+    "name": "Garage Door",
+    "location": "Garage entrance",
+    "status": "online"
+   },
+   {
+    "name": "Living Room",
+    "location": "Living room",
+    "status": "online"
+   }
+  ],
+  "known_faces": [
+   "Ana Ruiz",
+   "Anabel Costa",
+   "Grace Mensah",
+   "Maya Chen",
+   "Sam Okafor",
+   "Jordan Okafor"
+  ]
+ },
+ "user_script": {
+  "consent": "Yes, she knows the door camera recognises faces and that we may use it to check hours.",
+  "save": "No, don't save it.",
+  "snapshots": "No thanks."
+ }
+}

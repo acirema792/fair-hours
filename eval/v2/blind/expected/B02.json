@@ -1,0 +1,25 @@
+{
+ "id": "B02",
+ "title": "Agency carer: side door, storm outage, hooded arrival in the rain, a missed visit",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ],
+  [
+   "2026-11-04",
+   "Inconclusive"
+  ],
+  [
+   "2026-11-05",
+   "Not seen"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

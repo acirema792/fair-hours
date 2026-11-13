@@ -1,0 +1,16 @@
+{
+ "id": "C09",
+ "title": "Helper is not a registered known face",
+ "rows": [],
+ "must_contain_any": [
+  "register",
+  "known face",
+  "known identity",
+  "known person"
+ ],
+ "calls_forbidden": [
+  "save-text",
+  "event-evidence",
+  "event-timeline"
+ ]
+}

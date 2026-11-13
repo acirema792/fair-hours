@@ -1,0 +1,17 @@
+{
+ "id": "C22",
+ "title": "Helper event list cut at the limit (F11)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-05",
+   "Inconclusive"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "C21",
+ "mode": "check",
+ "user_message": "Check our nanny Maya Chen's timesheet Timesheets/maya-week.jpg against the Front Door camera, New York time. She knows the camera recognises faces and may be used to check hours.",
+ "fixtures": {
+  "helper_name": "Maya Chen",
+  "bill": {
+   "file": "Timesheets/maya-week.jpg",
+   "visits": [],
+   "currency": null,
+   "total": 0,
+   "failures": [
+    "handwriting could not be read"
+   ]
+  },
+  "ocr_text": "TIMESHEET Maya Chen\nMon 11/2  8:00 - 4:00  8 h\nTue 11/3  8:00 - 4:00  8 h\nTotal 16 h",
+  "helper_events": [
+   {
+    "event_id": "evt_20261102_0758",
+    "time": "2026-11-02T07:58:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Maya Chen"
+   },
+   {
+    "event_id": "evt_20261102_1603",
+    "time": "2026-11-02T16:03:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Maya Chen"
+   },
+   {
+    "event_id": "evt_20261103_0800",
+    "time": "2026-11-03T08:00:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Maya Chen"
+   },
+   {
+    "event_id": "evt_20261103_1400",
+    "time": "2026-11-03T14:00:00-05:00",
+    "camera": "Front Door",
+    "topic": "HumanFace",
+    "identity": "Maya Chen"
+   }
+  ],
+  "passages": [
+   {
+    "time": "2026-11-02T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-02T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T07:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T08:15:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T10:40:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T12:30:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T15:10:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   },
+   {
+    "time": "2026-11-03T18:05:00-05:00",
+    "camera": "Front Door",
+    "recognised": "yes"
+   }
+  ],
+  "cameras": [
+   {
+    "name": "Front Door",
+    "location": "Entrance",
+    "status": "online"
+   },
+   {
+    "name": "Garage Door",
+    "location": "Garage entrance",
+    "status": "online"
+   },
+   {
+    "name": "Living Room",
+    "location": "Living room",
+    "status": "online"
+   }
+  ],
+  "known_faces": [
+   "Ana Ruiz",
+   "Anabel Costa",
+   "Grace Mensah",
+   "Maya Chen",
+   "Sam Okafor",
+   "Jordan Okafor"
+  ]
+ },
+ "user_script": {
+  "consent": "Yes, she knows the door camera recognises faces and that we may use it to check hours.",
+  "save": "No, don't save it.",
+  "snapshots": "No thanks."
+ }
+}

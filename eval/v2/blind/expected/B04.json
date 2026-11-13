@@ -1,0 +1,21 @@
+{
+ "id": "B04",
+ "title": "Draft for cleaner with an ambiguous first name and a single-sighting day",
+ "rows": [
+  [
+   "2026-11-02",
+   "Draft"
+  ],
+  [
+   "2026-11-04",
+   "Inconclusive"
+  ],
+  [
+   "2026-11-06",
+   "Draft"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

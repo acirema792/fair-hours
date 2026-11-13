@@ -1,0 +1,18 @@
+{
+ "id": "C11",
+ "title": "No bill found in the folder the user named",
+ "rows": [],
+ "must_contain_any": [
+  "Draft",
+  "draft",
+  "type",
+  "typed"
+ ],
+ "max_calls": {
+  "ug-filesystem find": 1
+ },
+ "calls_forbidden": [
+  "ug-document",
+  "save-text"
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "id": "C14",
+ "title": "Split shift: two visits on one date",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-02",
+   "Confirmed"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "id": "C18",
+ "title": "Departure not recognised: an unrecognised person left near the billed end (F6)",
+ "rows": [
+  [
+   "2026-11-03",
+   "Inconclusive"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

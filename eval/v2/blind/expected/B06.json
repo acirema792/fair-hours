@@ -1,0 +1,10 @@
+{
+ "id": "B06",
+ "title": "Tutor who has not been told about face recognition",
+ "rows": [],
+ "calls_forbidden": [
+  "HumanFace",
+  "passage",
+  "save-text"
+ ]
+}

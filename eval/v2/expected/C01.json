@@ -1,0 +1,31 @@
+{
+ "id": "C01",
+ "title": "Cleaner invoice: confirmed, billed more, seen more, single sighting",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ],
+  [
+   "2026-11-04",
+   "Billed more than seen"
+  ],
+  [
+   "2026-11-05",
+   "Seen more than billed"
+  ],
+  [
+   "2026-11-06",
+   "Inconclusive"
+  ]
+ ],
+ "must_contain": [
+  "1 h 45 min",
+  "45 min",
+  "43.75",
+  "18.75"
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "id": "C24",
+ "title": "A chosen camera is not at an entrance (F9)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ],
+ "event_cameras_forbidden": [
+  "Living Room"
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "id": "C23",
+ "title": "User gives a short name; the registered name is confirmed first (F3)",
+ "rows": [
+  [
+   "2026-11-02",
+   "Confirmed"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}

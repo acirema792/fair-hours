@@ -1,0 +1,17 @@
+{
+ "id": "C17",
+ "title": "Consecutive night shifts share no events (F5)",
+ "rows": [
+  [
+   "2026-11-03",
+   "Confirmed"
+  ],
+  [
+   "2026-11-04",
+   "Confirmed"
+  ]
+ ],
+ "calls_forbidden": [
+  "save-text"
+ ]
+}
