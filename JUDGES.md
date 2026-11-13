@@ -8,7 +8,7 @@ No account, NAS or install is needed for steps 1–4. Step 5 needs Node and Pyth
 | 2 | [skill/fair-hours/SKILL.md](skill/fair-hours/SKILL.md), sections *Required input* and *Workflow* | The notice gate (item 7) comes before any camera query. There are eight steps and nine delegate templates, each naming its CLI and action. Step 5 asks for other people's passages **without names**. The only write is step 8, after the user says yes and the NAS approval prompt runs. |
 | 3 | [references/matching-rules.md](skill/fair-hours/references/matching-rules.md) | The 11-rule table. Read rules 6, 9, 10 and 11: an unrecognised person near the door, or a camera gap, gives `Inconclusive`. `Not seen` needs the camera to have recognised *other* people during the billed time. |
 | 4 | [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) | Expected and actual results for every case. The expected outcomes were committed before any run, and 6 cases were written blind by an author who never saw the rules. A baseline (same model, same tools, same policies, no Fair Hours rules) is scored the same way. The misses are documented, not hidden. |
-| 5 | Terminal | Run `node tools/uliya-kit-local/scripts/check-skill.mjs skill/fair-hours`, which gives `static-pass` with 0/0. Run `python3 tools/build_zip.py`, which rebuilds and re-checks the ZIP. Run `python3 eval/v2/score_v2.py eval/v2/runs/skill`, which re-scores the recorded runs. |
+| 5 | Terminal | Run `node $ULIYA_SKILL_KIT/scripts/check-skill.mjs skill/fair-hours`, which gives `static-pass` with 0/0. Run `python3 tools/build_zip.py`, which rebuilds and re-checks the ZIP. Run `python3 eval/v2/score_v2.py eval/v2/runs/skill`, which re-scores the recorded runs. |
 
 ## Where each judging criterion is answered
 

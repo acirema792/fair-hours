@@ -15,7 +15,12 @@ import zipfile
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SKILL = os.path.join(ROOT, "skill", "fair-hours")
-CHECK = os.path.join(ROOT, "tools", "uliya-kit-local", "scripts", "check-skill.mjs")
+# The official checker: set ULIYA_SKILL_KIT to an unzipped uliya-skill-kit 0.7.3 folder (from the Hackathon
+# Starter Kit). Falls back to a local copy in tools/uliya-kit-local/ (kept out of the public repository).
+_KIT = os.environ.get("ULIYA_SKILL_KIT") or os.path.join(ROOT, "tools", "uliya-kit-local")
+CHECK = os.path.join(_KIT, "scripts", "check-skill.mjs")
+if not os.path.exists(CHECK):
+    sys.exit("official checker not found: set ULIYA_SKILL_KIT to the unzipped uliya-skill-kit folder")
 DIST = os.path.join(ROOT, "dist")
 OUT = os.path.join(DIST, "fair-hours.zip")
 

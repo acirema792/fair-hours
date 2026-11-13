@@ -67,7 +67,7 @@ skill/fair-hours/         the Skill (this folder is what dist/fair-hours.zip con
 proposal/                 proposal source, word-counted PDF build, the PDF
 eval/                     bench v1 (history) and eval/v2 (current): mock experts, scripted user, cases, scorer, recorded runs
 tools/build_zip.py        builds the ZIP only if the official checker passes; re-checks the unzipped copy
-tools/uliya-kit-local/    local copy of the official checker (verified line by line against the kit; see CLAIMS.md)
+(the official checker is not redistributed: get uliya-skill-kit 0.7.3 from the Hackathon Starter Kit and set ULIYA_SKILL_KIT)
 loop/                     independent audit reports, ledger and state from the verified audit loop
 docs/assets/              cover and sample-report images (rendered from HTML)
 ```
