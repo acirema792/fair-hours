@@ -5,7 +5,7 @@ Use this layout in step 8. Keep the wording neutral: it describes what the bill 
 ## Check mode
 
 **Fair Hours: HELPER_NAME, PERIOD_START to PERIOD_END (TIMEZONE)**
-Bill: the file name, or "hours you typed". Cameras: the entry camera names. Tolerance: T min.
+Bill: the file name, or "hours you typed". Cameras: the entry camera names. Tolerance: T min, plus any agreed terms.
 
 | Date | Billed | Seen at entry cameras | Difference | Result | Evidence |
 |---|---|---|---|---|---|
@@ -14,18 +14,20 @@ Bill: the file name, or "hours you typed". Cameras: the entry camera names. Tole
 | Thu 2026-11-05 | 14:00–17:00 (3 h 00 min) | 13:55–17:40 (3 h 45 min) | seen 45 min longer than billed | Seen more than billed | 4 events |
 | Fri 2026-11-06 | 09:00–12:00 (3 h 00 min) | 09:02 only | none | Inconclusive: arrival or departure not recorded | 1 event |
 
-Rows are in date order. `Seen, not billed` dates appear in the same table with "none" in the Billed column.
+One row per billed visit, in date order; a split shift gives two rows on the same date. `Seen, not billed` dates appear in the same table with "none" in the Billed column. Bill lines for other workers are listed under the table as "not checked: other worker".
 
 **Totals**
 - Billed: hours over N visits.
 - Confirmed: hours over N visits.
 - Billed more than seen: hours over N visits.
 - Seen more than billed: hours over N visits, including dates seen but not billed.
-- Not seen while the cameras were recording: hours over N visits.
+- Not seen while the cameras recognised other people: hours over N visits.
 - Inconclusive: hours over N visits, with the reasons.
-- At the printed rate (only if the bill prints one): the money for "billed more than seen" and for "seen more than billed", shown side by side, never netted.
+- At the printed rates (only if the bill prints rates): the money for "billed more than seen" and for "seen more than billed", side by side, never netted.
 
-**What this means** (two or three sentences): what matched, where the differences are in each direction, and that camera times show passages through the entry, not the work done between them. Suggest going through the differences with the helper, starting with the ones in the helper's favour. Offer snapshots for any row that is not `Confirmed` (step 7) and offer to save the report (step 8).
+**Bill arithmetic** (only if a check fails): each line whose hours × rate differs from its amount, and a total that differs from the sum of the lines, with both numbers.
+
+**What this means** (two or three sentences): what matched, where the differences are in each direction, and that camera times show passages through the entry, not the work done between them. Suggest going through the differences with the helper, starting with the ones in the helper's favour. Offer snapshots for rows that are not `Confirmed` and have helper events (step 7); for rows without helper events, give the camera and time window to review in the surveillance app. Offer to save the report (step 8).
 
 ## Draft mode
 
@@ -34,9 +36,9 @@ Rows are in date order. `Seen, not billed` dates appear in the same table with "
 | Date | First seen | Last seen | Time between | Note |
 |---|---|---|---|---|
 
-Then the total of "Time between", the dates marked `Inconclusive`, and the same offers.
+Then the total of "Time between", the lines marked `Inconclusive`, and the same offers. An overnight line shows both dates in the Date column.
 
 ## Words to use and to avoid
 
-Use: matched, billed more than seen, seen more than billed, not seen while recording, inconclusive, difference, sighting.
+Use: matched, billed more than seen, seen more than billed, not seen, inconclusive, difference, sighting, passage.
 Avoid: fraud, cheating, lying, theft, no-show, absent, caught, overcharged, owes. Never state what anyone should pay.

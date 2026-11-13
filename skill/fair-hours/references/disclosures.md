@@ -2,7 +2,7 @@
 
 ## Principal functionality developed for this Hackathon
 
-The whole Skill was written during the UGREEN Hackathon 2026 on AI NAS: the visit-by-visit workflow across four registered experts, the matching rules and their results, the recording-proof rule that separates `Not seen` from `Inconclusive`, the two-direction totals, Draft mode, the privacy limits and the report format. No earlier Skill or submission material is reused.
+The whole Skill was written during the UGREEN Hackathon 2026 on AI NAS: the visit-by-visit workflow across five registered experts, the matching rules and their results, the passage rules that separate `Not seen` from `Inconclusive` without naming anyone else, the two-direction totals, the bill arithmetic check, Draft mode, the privacy limits and the report format. No earlier Skill or submission material is reused.
 
 ## Third-party components and open source libraries
 
@@ -10,7 +10,7 @@ None. The package contains only original Markdown files: `SKILL.md` and the file
 
 ## Platform capabilities used at run time
 
-The Skill delegates to the experts registered on UGREEN AI NAS (security-monitor-agent, document-agent, file-agent, knowledge-agent) and uses the AI models those experts run on the NAS. It calls no external service and sends no data off the device.
+The Skill delegates to the experts registered on UGREEN AI NAS (security-monitor-agent, document-agent, photo-agent, file-agent, knowledge-agent) and uses the AI models those experts run on the NAS. The Skill itself calls no external service and sends no data off the device; which chat model Uliya uses to orchestrate it is a Uliya setting outside the Skill.
 
 ## AI tools used and their principal uses
 
