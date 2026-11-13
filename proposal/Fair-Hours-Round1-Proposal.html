@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Fair Hours: Round 1 Proposal</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+<style>
+@page { size: Letter; }
+body { font-family: Inter, 'DejaVu Sans', sans-serif; font-size: 9.6pt; line-height: 1.38; color: #1d2430; }
+h1 { font-size: 20pt; margin: 0 0 2pt 0; color: #0f5132; letter-spacing: -0.3px; }
+h1 + p { margin-top: 0; color: #4a5568; font-size: 10pt; }
+h2 { font-size: 10.4pt; margin: 9pt 0 2pt 0; color: #0f5132; }
+p { margin: 2pt 0 3pt 0; }
+ul { margin: 2pt 0 3pt 0; padding-left: 15pt; }
+li { margin: 0.5pt 0; }
+hr { border: 0; border-top: 1px solid #cfd8dc; margin: 10pt 0 6pt 0; }
+hr ~ h2, hr ~ p { font-size: 8.4pt; color: #4a5568; }
+strong { color: #111827; }
+img { display: block; margin: 5pt auto 4pt; border-radius: 6px; }
+.wc { position: fixed; bottom: 0; right: 0; font-size: 7.5pt; color: #8a94a6; }
+</style></head>
+<body>
+
+<h1 id="fair-hours">Fair Hours</h1>
+<p><strong>Did the hours on the bill happen at your door? A Uliya Skill
+for UGREEN AI NAS</strong> · Track: Open Innovation</p>
+<h2 id="what-does-your-skill-do">1. What does your Skill do?</h2>
+<p>Fair Hours checks a home helper’s hourly bill against the times the
+household’s own entry cameras recognised that helper, visit by visit, in
+both directions, on the NAS.</p>
+<h2 id="who-is-the-target-user-and-what-is-their-problem">2. Who is the
+target user, and what is their problem?</h2>
+<p>Households paying cleaners, nannies, dog walkers or home-care aides
+by the hour (2.2 million US domestic workers alone). Weekly bills get
+trusted blindly or checked against paper logs. Medicaid must
+electronically verify home-care visits (21st Century Cures Act); private
+payers have nothing. Errors run both ways: helpers also forget to bill
+time.</p>
+<h2 id="what-is-your-solution">3. What is your solution?</h2>
+<p>“Check Ana’s invoice against the front door camera.” Fair Hours reads
+the bill, pulls only Ana’s recognised arrivals and departures, and fixed
+rules give each visit one result: Confirmed, Billed more than seen, Seen
+more than billed, Not seen, Inconclusive, or Seen, not billed. Totals
+show both directions side by side, priced at printed rates, plus bill
+arithmetic errors. No bill? It drafts a timesheet for both sides to
+confirm.</p>
+<p><img src="../docs/assets/sample-report.png"
+style="width:88.0%" /></p>
+<h2 id="what-is-the-main-user-flow">4. What is the main user flow?</h2>
+<p>Notice confirmed → cameras and registered name checked → bill found
+and read (OCR for photos) → helper’s events → anonymous passages for
+doubtful dates → rules → report → optional approved save.</p>
+<h2
+id="how-is-your-idea-different-from-existing-tools-or-common-ai-solutions">5.
+How is your idea different from existing tools or common AI
+solutions?</h2>
+<p>General assistants eyeball timelines and guess. Fair Hours gives
+every doubt to the helper: an unrecognised person near the door, a
+camera gap or a cut-off list means Inconclusive, never Not seen. On our
+bench, the same model without these rules made {{BASE_HARM}} harmful
+calls; with them, {{SKILL_HARM}}. Cloud tools would need home footage
+uploaded; here faces, bills and reports stay local.</p>
+<h2
+id="which-ugreen-ai-nas-features-does-your-skill-use-and-at-which-step">6.
+Which UGREEN AI NAS features does your Skill use, and at which
+step?</h2>
+<p>security-monitor-agent: ug-surveillance cameras, faces (step 1),
+event-timeline (4–5), event-evidence (7). file-agent: ug-filesystem find
+(2). document-agent: ug-document extract (3). photo-agent: ug-photo
+vision-ocr (3). knowledge-agent: ug-knowledge save-text, approval-gated
+(8).</p>
+<h2 id="what-is-your-technical-approach">7. What is your technical
+approach?</h2>
+<p>Markdown-only orchestration: nine single-quoted delegate templates
+with UPPER_CASE slots filled from confirmed values; each step uses only
+real upstream results. An 11-rule table decides every result, in
+whole-minute arithmetic. All five delegation states are handled per
+step. Inputs: mode, registered name, period, bill or typed hours, entry
+cameras, tolerance, agreed terms. Permissions: read-only except one
+approved save; notice gate; entrance cameras only; other people counted
+without names; snapshots only on request. Models: the NAS experts’ local
+models; no external services.</p>
+<h2
+id="what-have-you-built-so-far-what-is-not-built-yet-what-still-needs-testing-on-a-nas">8.
+What have you built so far? What is not built yet? What still needs
+testing on a NAS?</h2>
+<p>Built: the Skill package (SKILL.md, six references), passing the
+official checker with 0 errors, 0 warnings; an offline bench of
+{{N_CASES}} cases (6 written blind) with mock experts and outcomes fixed
+before runs. Not built: any NAS run. Needs NAS testing: parameter
+behaviour, outage warnings, unknown-name responses, departure
+recognition.</p>
+<h2 id="how-will-you-test-your-skill-if-you-become-a-finalist">9. How
+will you test your Skill if you become a Finalist?</h2>
+<p>Core 1: a PDF bill with one planned line per result, an arithmetic
+error, and the approved save. Core 2: Draft mode, then a photographed
+handwritten timesheet via OCR. Edge: camera disabled 30 minutes, and a
+face-turned-away walk-past; both must be Inconclusive, never Not
+seen.</p>
+<h2
+id="what-are-the-known-limits-risks-or-outside-dependencies-of-your-skill">10.
+What are the known limits, risks, or outside dependencies of your
+Skill?</h2>
+<p>Needs entry cameras and the helper registered as a known face.
+Cameras show passages, not work. Recognition misses produce
+Inconclusive. Workplace camera rules vary. Uliya’s orchestration model
+follows user settings. Catalog parameter behaviour is unverified until
+NAS access.</p>
+<hr />
+<h2 id="declarations-excluded-from-the-word-limit">Declarations
+(excluded from the word limit)</h2>
+<p><strong>Entrant:</strong> {{ENTRANT_NAME}}.
+<strong>Originality:</strong> The Skill and its core workflow were newly
+developed during the UGREEN Hackathon 2026 on AI NAS. No previously
+developed Skill or submission material is reused.
+<strong>Signature:</strong> {{SIGNATURE}}, {{DATE}}.</p>
+<p><strong>Third-party components:</strong> None in the Skill package,
+which contains only original Markdown. Development tools: the UGOS Skill
+Creation Tool (uliya-skill-kit 0.7.3, UGREEN Hackathon Starter Kit, used
+under its user agreement) for the capability catalog and the official
+checker. Claude (Anthropic) was used as an AI assistant for drafting and
+for the off-device test bench.</p>
+<p><strong>Sources:</strong> Economic Policy Institute, <em>Domestic
+workers chartbook</em> (2.2 million US domestic workers, 2019). 21st
+Century Cures Act §12006 (electronic visit verification for Medicaid
+personal care and home health visits).</p>
+<div class="wc">Ten answers: 481 words</div></body>
+</html>
