@@ -23,7 +23,7 @@ Collect these before the first delegation. Ask once, in one short message, for a
 6. **Tolerance**: minutes of difference treated as a match. Default 10. Optional **agreed terms**: a minimum visit length or a rounding unit.
 7. **Notice**: the user confirms the helper knows the entry cameras recognise faces and may be used to check hours. If the user says no, explain that Fair Hours only works when the helper has been told, mention that some places require written consent for this, and stop before any camera query.
 
-Value slots in the delegate instructions below are written in UPPER_CASE (HELPER_NAME, PERIOD_START, PERIOD_END, QUERY_END, DATES, TIMEZONE, ENTRY_CAMERAS, BILL_FILE, BILL_FOLDER, NAME_HINT, SAVE_FOLDER, REPORT_TEXT, EVENT_IDS). Replace every slot with the confirmed value before sending. Never send an instruction that still contains an UPPER_CASE slot. Write dates as YYYY-MM-DD and times as HH:MM in TIMEZONE. QUERY_END is the day after PERIOD_END, so a night shift on the last date keeps its morning departure. If any value contains a single quote (a name such as O'Brien, a file name, the report), write that quote with the standard shell sequence for a quote inside single quotes.
+Value slots in the delegate instructions below are written in UPPER_CASE (HELPER_NAME, PERIOD_START, PERIOD_END, DATES, TIMEZONE, ENTRY_CAMERAS, BILL_FILE, BILL_FOLDER, NAME_HINT, SAVE_FOLDER, REPORT_TEXT, EVENT_IDS). Replace every slot with the confirmed value before sending. Never send an instruction that still contains an UPPER_CASE slot. Write dates as YYYY-MM-DD and times as HH:MM in TIMEZONE. PERIOD_START and PERIOD_END are the dates the user gave or, when the period comes from the bill, the first and last billed dates read in step 3. If any value contains a single quote (a name such as O'Brien, a file name, the report), write that quote with the standard shell sequence for a quote inside single quotes.
 
 # Generation-time capability evidence
 
@@ -64,11 +64,11 @@ If the bill is a photo or scan and extract returns no readable visits, try once:
 
 `delegate --target photo-agent --instruction 'Use ug-photo vision-ocr on the file BILL_FILE. Read only. Return the recognised text exactly as read, line by line.'`
 
-From OCR text, use only dates, times, hours, rates and amounts that appear in it, and show the user the lines read before comparing. Keep only visits dated inside the period. If no billed visit can be read, say so and offer typed hours or Draft mode. Never invent a visit, a time or a rate.
+From OCR text, use only dates, times, hours, rates and amounts that appear in it, and list the lines used at the top of the report; continue without waiting for a confirmation unless a date or time cannot be read. Keep only visits dated inside the period. If no billed visit can be read, say so and offer typed hours or Draft mode. Never invent a visit, a time or a rate.
 
 **Step 4. Helper events (security-monitor-agent).**
 
-`delegate --target security-monitor-agent --instruction 'Use ug-surveillance event-timeline from PERIOD_START 00:00 to QUERY_END 12:00 in time zone TIMEZONE, for the cameras ENTRY_CAMERAS, with topic Human and HumanFace, identity-type known, person-name HELPER_NAME and limit 500. Return every event with its event id, local time, camera and the identity name exactly as recorded, and say whether the list was cut at the limit. Read only. Do not return events of any other person. Report any warning about missing recordings or offline cameras.'`
+`delegate --target security-monitor-agent --instruction 'Use ug-surveillance event-timeline from PERIOD_START 00:00 to 12:00 on the day after PERIOD_END in time zone TIMEZONE, for the cameras ENTRY_CAMERAS, with topic Human and HumanFace, identity-type known, person-name HELPER_NAME and limit 500. Return every event with its event id, local time, camera and the identity name exactly as recorded, and say whether the list was cut at the limit. Read only. Do not return events of any other person. Report any warning about missing recordings or offline cameras.'`
 
 If the list was cut at the limit, repeat step 4 one week at a time; dates still cut become `Inconclusive` under the matching rules. An empty list is a real result: continue, because it feeds the rules in step 6.
 

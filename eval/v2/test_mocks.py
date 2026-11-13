@@ -2,9 +2,10 @@
 """Routing test for the v2 mock experts: every delegate template in SKILL.md, with slots filled for C01,
 must reach the intended action. Run before any bench run (added after a routing bug invalidated a run set)."""
 import json, os, re, subprocess, sys, tempfile
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 HERE = os.path.dirname(os.path.abspath(__file__))
 SKILL = os.path.join(HERE, "..", "..", "skill", "fair-hours", "SKILL.md")
-FILL = {"HELPER_NAME": "Ana Ruiz", "PERIOD_START": "2026-11-02", "PERIOD_END": "2026-11-08", "QUERY_END": "2026-11-09",
+FILL = {"HELPER_NAME": "Ana Ruiz", "PERIOD_START": "2026-11-02", "PERIOD_END": "2026-11-08", 
         "DATES": "2026-11-04", "TIMEZONE": "America/New_York", "ENTRY_CAMERAS": "Front Door", "BILL_FILE": "Invoices/Ana Ruiz - Nov week 1.pdf",
         "BILL_FOLDER": "Invoices", "NAME_HINT": "Ana", "SAVE_FOLDER": "Documents", "REPORT_TEXT": "report", "EVENT_IDS": "evt_20261104_0910"}
 EXPECT = [("identity-type known, person-name", "items"), ("identity-type all", "items"), ("event-evidence", "evidence"),
@@ -23,6 +24,8 @@ for target, inst in tmpl:
     ok = (key is None and out["state"] == "failed") or (key in data)
     if "person-name" in inst:
         ok = ok and data["count"] == 10  # all ten C01 helper events fall in the window
+        import mock_delegate as M
+        ok = ok and M.window(inst) == ("2026-11-02 00:00", "2026-11-09 12:00")  # 12:00 on the day after PERIOD_END
     if "identity-type all" in inst:
         ok = ok and data["count"] == 6 and all(i["time"].startswith("2026-11-04") for i in data["items"])  # DATES only
     bad += not ok

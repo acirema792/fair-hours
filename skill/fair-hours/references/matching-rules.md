@@ -22,7 +22,7 @@ Apply the first rule that fits. D = B − S.
 
 | # | Situation | Result | Reason to show |
 |---|---|---|---|
-| 1 | The step 4 or step 5 list for that date was cut at its limit | `Inconclusive` | "event list truncated" |
+| 1 | The step 4 or step 5 list was cut at its limit before that date ended (a cut list is complete up to its last returned event; only later dates count as cut) | `Inconclusive` | "event list truncated" |
 | 2 | No helper events in the whole period, and the bill has two or more visits | `Inconclusive` for every visit | "the helper was never recognised in the period; check the registered name" |
 | 3 | Single sighting | `Inconclusive` | "arrival or departure not recorded" |
 | 4 | Visit events exist and D is from −T to +T, both ends included | `Confirmed` | B, S and D |

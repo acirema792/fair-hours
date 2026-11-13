@@ -1,0 +1,28 @@
+Fair Hours: Rosa Delgado, 2026-11-02 to 2026-11-08 (America/New_York)
+
+Bill: Nanny/Rosa timesheet Nov 2-8.pdf. Cameras: Front Door (the front door camera you named; Garage Door and Nursery were not used). Tolerance: 10 min. No agreed terms given.
+
+| Date | Billed | Seen at entry cameras | Difference | Result | Evidence |
+|---|---|---|---|---|---|
+| Mon 2026-11-02 | 07:00-09:00 (2 h 00 min) | 06:57-08:52 (1 h 55 min) | 5 min | Confirmed | 2 events |
+| Mon 2026-11-02 | 15:00-18:30 (3 h 30 min) | 15:03-18:34 (3 h 31 min) | 1 min | Confirmed | 2 events |
+| Tue 2026-11-03 | 15:00-19:00 (4 h 00 min) | 15:00-20:15 (5 h 15 min) | seen 75 min longer than billed | Seen more than billed | 3 events |
+| Thu 2026-11-05 | 13:00-17:00 (4 h 00 min) | 13:05-16:55 (3 h 50 min) | 10 min | Confirmed | 3 events |
+| Sat 2026-11-07 | none | 18:02-23:41 (5 h 39 min) | none | Seen, not billed | 2 events |
+
+**Totals**
+- Billed: 13 h 30 min over 4 visits.
+- Confirmed: 9 h 30 min over 3 visits.
+- Billed more than seen: 0 h over 0 visits.
+- Seen more than billed: 6 h 54 min. This is 1 h 15 min over 1 visit (Tue 2026-11-03) plus 5 h 39 min on Sat 2026-11-07, a date with no billed visit.
+- Not seen while the cameras recognised other people: 0 h over 0 visits.
+- Inconclusive: 0 h over 0 visits.
+- At the printed rates (22 USD per hour): billed more than seen 0.00 USD; seen more than billed 27.50 USD for the Tue 2026-11-03 visit. No money is shown for Sat 2026-11-07 because no line of the bill covers it.
+
+**Bill arithmetic:** all four lines check (2 x 22 = 44, 3.5 x 22 = 77, 4 x 22 = 88, 4 x 22 = 88), and the lines add up to the printed total of 297.00 USD.
+
+**What this means:** Three of the four billed visits match within the tolerance. The largest difference is unbilled time: Rosa was seen at the front door for 75 minutes after the billed end on Tue 2026-11-03, and on Sat 2026-11-07 there were sightings from 18:02 to 23:41 on a day with no bill. That is the first thing to go through with Rosa. Camera times show passages through the front door, not the work done in between.
+
+Would you like snapshots for the Tue 2026-11-03 row to review in the surveillance app (I will not export or share them)? And would you like this report saved to a folder on the NAS? If so, tell me which folder.
+
+The user replied: "No, don't save anything." Nothing was saved, and no snapshots were requested.

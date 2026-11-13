@@ -43,7 +43,12 @@ def cameras_named(inst, cams):
 
 
 def window(inst):
-    """(start, end) as 'YYYY-MM-DD HH:MM' strings from 'from X ... to Y', else None."""
+    """(start, end) as 'YYYY-MM-DD HH:MM' strings from 'from X ... to Y' or 'from X ... to HH:MM on the day after Y', else None."""
+    import datetime
+    m = re.search(r"from\s+(2026-\d\d-\d\d)(?:[ T](\d\d:\d\d))?\s+to\s+(\d\d:\d\d)\s+on the day after\s+(2026-\d\d-\d\d)", inst)
+    if m:
+        nxt = (datetime.date.fromisoformat(m.group(4)) + datetime.timedelta(days=1)).isoformat()
+        return f"{m.group(1)} {m.group(2) or '00:00'}", f"{nxt} {m.group(3)}"
     m = re.search(r"from\s+(2026-\d\d-\d\d)(?:[ T](\d\d:\d\d))?.{0,40}?\bto\s+(2026-\d\d-\d\d)(?:[ T](\d\d:\d\d))?", inst)
     if not m:
         return None
