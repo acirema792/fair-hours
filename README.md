@@ -2,7 +2,7 @@
 
 **Did the hours on the bill happen at your door?** A Uliya Skill for UGREEN AI NAS that checks a home helper's hourly bill, visit by visit, against the times the household's own entry cameras recognised that helper. Differences are counted in both directions, and the camera footage and bills never leave the NAS.
 
-UGREEN Hackathon 2026 on AI NAS · Track: Open Innovation · Round 1 entry
+UGREEN Hackathon 2026 on AI NAS · Track: Explore Your Imagination (Open Innovation) · Round 1 entry
 
 ![Fair Hours](docs/assets/cover.png)
 
@@ -11,7 +11,7 @@ UGREEN Hackathon 2026 on AI NAS · Track: Open Innovation · Round 1 entry
 | Skill package (submitted ZIP) | [`dist/fair-hours.zip`](dist/fair-hours.zip): `SKILL.md` plus 6 references, Markdown only ([checksums](dist/SHA256SUMS.txt)) |
 | Proposal (submitted PDF) | [`proposal/Fair-Hours-Round1-Proposal.pdf`](proposal/Fair-Hours-Round1-Proposal.pdf) |
 | Official checker | `static-pass`: 0 errors, 0 warnings (uliya-skill-kit 0.7.3, catalog 2.0.0) |
-| Test bench | see [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) |
+| Test bench (35 cases, same small model both sides) | Fair Hours **31/35** cases fully right, **0** harmful calls · baseline 13/35, 8 harmful · [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) |
 | Review in five minutes | [JUDGES.md](JUDGES.md) |
 | Every claim and its evidence | [CLAIMS.md](CLAIMS.md) |
 
@@ -35,7 +35,7 @@ With no bill, it drafts a timesheet from the camera events for both sides to con
 
 ![Sample report](docs/assets/sample-report.png)
 
-*From a real bench run: [eval/v2/runs/skill-final/C01/final.md](eval/v2/runs/skill-final/C01/final.md).*
+*From a recorded bench run: [eval/v2/runs/skill-final/C01/final.md](eval/v2/runs/skill-final/C01/final.md) (Sonnet stand-in). The headline Haiku run of the same case: [eval/v2/runs/skillhaiku-r3/C01/final.md](eval/v2/runs/skillhaiku-r3/C01/final.md).*
 
 ## Every doubt goes to the helper
 
@@ -83,12 +83,13 @@ Rebuild the submission files:
 ```
 python3 tools/build_zip.py
 python3 proposal/build_proposal.py
+python3 tools/make_benchmark_md.py   # regenerates BENCHMARK-RESULTS.md and the proposal numbers from the recorded runs
 ```
 
 ## Honest limits
 
 - Nothing has run on a UGREEN NAS yet; Round 1 gives no NAS access. The [validation plan](skill/fair-hours/references/validation-plan.md) lists what the finalist day must confirm: parameter behaviour, outage warnings, the response for an unknown name, and face recall on departures.
 - The bench uses stand-in experts and a stand-in model, not Uliya. The numbers measure whether the rules are clear enough for a model to follow; they do not measure NAS accuracy.
-- Cameras show passages through the entry, not work. Recording rules for household employees differ by place.
+- Cameras show passages through the entry, not work. Fair Hours itself calls no external service; which chat model Uliya uses to run it is a Uliya setting. Recording rules for household employees differ by place.
 
 Independent entry; not an official UGREEN Skill. Skill text and bench © the entrant, MIT License.

@@ -20,7 +20,7 @@ Checks a home helper's hourly bill against when your own door camera recognised 
 
 ## Track
 
-Open Innovation
+Explore Your Imagination (the Devpost label for the rules' Open Innovation track)
 
 ## About the project
 
@@ -38,7 +38,7 @@ You tell Uliya: *"Check Ana's cleaning invoice against the front door camera."* 
 - An 11-rule table decides every result. The model only applies the rules and explains them.
 - Other people at the door are used only as anonymous passages (time, camera, recognised yes/no), never names.
 - A notice gate stops before any camera query if the helper hasn't been told the cameras recognise faces and may be used to check hours.
-- To test it before NAS access, we built an offline bench: mock NAS experts, a scripted user, and expected outcomes committed before any run. It has {{N_CASES}} cases, 6 of them written blind by a separate author who never saw the rules. The same model following Fair Hours made {{SKILL_HARM}} harmful calls. Without the rules, given the same tools and policies, it made {{BASE_HARM}}.
+- To test it before NAS access, we built an offline bench: mock NAS experts, a scripted user, and expected outcomes committed before any run. It has 35 cases, 6 of them written blind by a separate author who never saw the rules. The same model following Fair Hours made 0 harmful calls and got 31/35 cases fully right. Without the rules, given the same tools and policies, it made 8 harmful calls and got 13/35.
 
 ### Challenges
 The hard part was fairness. Our first rules would have called a visit "Not seen" when someone unrecognised passed the door during the billed time, but that person could have been the helper with her face turned away. An independent audit caught it. The fix runs the other way: unrecognised passages now count *for* the helper. Blind cases caught two more gaps: an agency substitute's line was hidden, and "the door cameras" led to an unnecessary question.
@@ -61,4 +61,4 @@ uliya, ugos, ugreen-ai-nas, markdown, python (offline bench only)
 
 ## Links
 
-- Repository: {{REPO_URL}} (optional for Round 1)
+- Repository: https://github.com/acirema792/fair-hours (optional for Round 1)

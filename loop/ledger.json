@@ -161,6 +161,48 @@
    "action": "bench v2 as new files; v1 cases/scorer untouched (protected)",
    "outcome": "success",
    "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G1",
+   "action": "mock fix + full Haiku baseline re-run (r3, 35 cases)",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G4",
+   "action": "--allow-placeholders writes a -DRAFT file; built PDF checked for '{{'",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G7",
+   "action": "first-contact blind scores disclosed in History table",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G9",
+   "action": "format note: baseline gets the same labels and table shape",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G13",
+   "action": "'Fair Hours itself calls no external service' wording in README/proposal",
+   "outcome": "success",
+   "error": null
+  },
+  {
+   "round": 2,
+   "finding": "G16",
+   "action": "CLAIMS.md added; JUDGES/README point at headline run and make_benchmark_md.py",
+   "outcome": "success",
+   "error": null
   }
  ]
 }

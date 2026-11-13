@@ -7,8 +7,8 @@ No account, NAS or install is needed for steps 1–4. Step 5 needs Node and Pyth
 | 1 | [docs/assets/sample-report.png](docs/assets/sample-report.png) and [the run it came from](eval/v2/runs/skill-final/C01/final.md) | One sentence in, one table out. The differences go both ways (Nov 4 against the helper, Nov 5 in her favour). They are priced at the printed rate and never netted. Nov 6 is `Inconclusive` because there was only one sighting. |
 | 2 | [skill/fair-hours/SKILL.md](skill/fair-hours/SKILL.md), sections *Required input* and *Workflow* | The notice gate (item 7) comes before any camera query. There are eight steps and nine delegate templates, each naming its CLI and action. Step 5 asks for other people's passages **without names**. The only write is step 8, after the user says yes and the NAS approval prompt runs. |
 | 3 | [references/matching-rules.md](skill/fair-hours/references/matching-rules.md) | The 11-rule table. Read rules 6, 9, 10 and 11: an unrecognised person near the door, or a camera gap, gives `Inconclusive`. `Not seen` needs the camera to have recognised *other* people during the billed time. |
-| 4 | [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) | Expected and actual results for every case. The expected outcomes were committed before any run, and 6 cases were written blind by an author who never saw the rules. A baseline (same model, same tools, same policies, no Fair Hours rules) is scored the same way. The misses are documented, not hidden. |
-| 5 | Terminal | Run `node $ULIYA_SKILL_KIT/scripts/check-skill.mjs skill/fair-hours`, which gives `static-pass` with 0/0. Run `python3 tools/build_zip.py`, which rebuilds and re-checks the ZIP. Run `python3 eval/v2/score_v2.py eval/v2/runs/skill`, which re-scores the recorded runs. |
+| 4 | [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md) | Headline: 31/35 cases fully right and 0 harmful calls with Fair Hours, 13/35 and 8 without. Expected and actual results for every case. The expected outcomes were committed before any run, and 6 cases were written blind by an author who never saw the rules. A baseline (same model, same tools, same policies, no Fair Hours rules) is scored the same way. The misses are documented, not hidden. |
+| 5 | Terminal | Run `node $ULIYA_SKILL_KIT/scripts/check-skill.mjs skill/fair-hours`, which gives `static-pass` with 0/0. Run `python3 tools/build_zip.py`, which rebuilds and re-checks the ZIP. Run `python3 eval/v2/score_v2.py eval/v2/runs/skillhaiku-r3` (the headline run; add `--expected eval/v2/blind/expected` or `--expected eval/v2/round2/expected` for the other sets), or `python3 tools/make_benchmark_md.py` to regenerate every table. |
 
 ## Where each judging criterion is answered
 
@@ -18,6 +18,8 @@ No account, NAS or install is needed for steps 1–4. Step 5 needs Node and Pyth
 | Innovation & Differentiation | Recording proof from anonymous passages, the rule that unrecognised passages count *for* the helper, two-direction totals and a timesheet drafted from the camera: [matching-rules.md](skill/fair-hours/references/matching-rules.md). The A/B against a generic assistant is in [BENCHMARK-RESULTS.md](BENCHMARK-RESULTS.md). |
 | Technical Quality | Five experts and nine templates; the delegation states per step are in [states-and-recovery.md](skill/fair-hours/references/states-and-recovery.md). The checker passes 0/0. The independent audits are in [loop/audits/](loop/audits/). |
 | AI NAS Fit & Validation | Local face identities, the camera event timeline, documents, OCR and an approval-gated save: [README § Built on UGREEN AI NAS](README.md#built-on-ugreen-ai-nas). Privacy limits are in [privacy-and-fairness.md](skill/fair-hours/references/privacy-and-fairness.md). The finalist plan, with a no-camera fallback, is in [validation-plan.md](skill/fair-hours/references/validation-plan.md). |
+
+Every public claim and its evidence: [CLAIMS.md](CLAIMS.md).
 
 ## What is real and what is simulated
 

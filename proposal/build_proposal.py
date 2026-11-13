@@ -58,6 +58,10 @@ def main():
     left = sorted(set(re.findall(r"\{\{([A-Z_]+)\}\}", md)))
     if left and not allow:
         sys.exit(f"unfilled placeholders: {left}")
+    out_pdf, out_html = OUT_PDF, OUT_HTML
+    if left:  # a draft never overwrites the submission file
+        out_pdf, out_html = OUT_PDF.replace(".pdf", "-DRAFT.pdf"), OUT_HTML.replace(".html", "-DRAFT.html")
+        print(f"DRAFT: unfilled placeholders {left}; writing {os.path.basename(out_pdf)}")
     words = count_words(answers_text(md))
     print(f"words in the ten answers: {words} / 500")
     if words > 500:
@@ -67,16 +71,19 @@ def main():
     html = html.replace("</head>", f"<style>{CSS}</style></head>")
     html = re.sub(r"<header id=\"title-block-header\">.*?</header>", "", html, flags=re.S)
     html = html.replace("</body>", f'<div class="wc">Ten answers: {words} words</div></body>')
-    open(OUT_HTML, "w").write(html)
+    open(out_html, "w").write(html)
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         b = p.chromium.launch(executable_path="/usr/bin/google-chrome")
         pg = b.new_page()
-        pg.goto("file://" + OUT_HTML)
-        pg.pdf(path=OUT_PDF, format="Letter", print_background=True, margin={"top": "15mm", "bottom": "15mm", "left": "17mm", "right": "17mm"})
+        pg.goto("file://" + out_html)
+        pg.pdf(path=out_pdf, format="Letter", print_background=True, margin={"top": "15mm", "bottom": "15mm", "left": "17mm", "right": "17mm"})
         b.close()
-    size = os.path.getsize(OUT_PDF)
-    print(f"PDF {OUT_PDF} {size} bytes ({'OK' if size <= 1024 * 1024 else 'OVER 1 MB'})")
+    size = os.path.getsize(out_pdf)
+    text = subprocess.run(["pdftotext", out_pdf, "-"], capture_output=True, text=True, check=True).stdout
+    if "{{" in text and not left:
+        sys.exit("the built PDF still contains '{{': refusing")
+    print(f"PDF {out_pdf} {size} bytes ({'OK' if size <= 1024 * 1024 else 'OVER 1 MB'})")
     if size > 1024 * 1024:
         sys.exit(1)
 

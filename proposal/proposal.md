@@ -30,7 +30,7 @@ security-monitor-agent: ug-surveillance cameras, faces (step 1), event-timeline 
 
 ## 7. What is your technical approach?
 
-Markdown-only orchestration: nine single-quoted delegate templates with UPPER_CASE slots filled from confirmed values; each step uses only real upstream results. An 11-rule table decides every result, in whole-minute arithmetic. All five delegation states are handled per step. Inputs: mode, registered name, period, bill or typed hours, entry cameras, tolerance, agreed terms. Permissions: read-only except one approved save; notice gate; entrance cameras only; other people counted without names; snapshots only on request. Models: the NAS experts' local models; no external services.
+Markdown-only orchestration: nine single-quoted delegate templates with UPPER_CASE slots filled from confirmed values; each step uses only real upstream results. An 11-rule table decides every result, in whole-minute arithmetic. All five delegation states are handled per step. Inputs: mode, registered name, period, bill or typed hours, entry cameras, tolerance, agreed terms. Permissions: read-only except one approved save; notice gate; entrance cameras only; other people counted without names; snapshots only on request. Models: the NAS experts' local models; Fair Hours itself calls no external service.
 
 ## 8. What have you built so far? What is not built yet? What still needs testing on a NAS?
 

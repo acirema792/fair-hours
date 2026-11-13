@@ -1,10 +1,12 @@
 {
- "N_CASES": 31,
+ "N_CASES": 35,
  "SKILL_HARM": 0,
- "BASE_HARM": 13,
- "SKILL_PASS": "30/31",
- "BASE_PASS": "3/31",
+ "BASE_HARM": 8,
+ "SKILL_PASS": "31/35",
+ "BASE_PASS": "13/35",
  "ENTRANT_NAME": "Oscar Arturo Ariza-Vargas (individual entrant, Colombia)",
  "SIGNATURE": "/s/ Oscar Arturo Ariza-Vargas",
- "DATE": "2026-11-15"
+ "DATE": "2026-11-15",
+ "SKILL_ROWS": "73/73",
+ "BASE_ROWS": "54/73"
 }
